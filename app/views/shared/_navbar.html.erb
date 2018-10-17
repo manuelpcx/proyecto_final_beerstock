@@ -1,0 +1,41 @@
+<div class="sticky-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+  <a class="navbar-brand" href="#"> <%= image_tag "beer.png", class:'icono'%><h4 class="beer">Beerstock
+  </h4></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="<%= root_path%>">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= products_path%>">Productos</a>
+      </li>
+      <li class="nav-item" id="navbarDropdown">
+        <a class="nav-link" href="#">Carro de compra</a>
+      </li>
+      <li class="nav-item dropdown" id="navbarDropdown">
+        <a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <% if user_signed_in? %>
+            <%= current_user.name %>
+          <% else %>
+           Ingresar
+           <% end%>
+        </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <% if user_signed_in? %>
+              <a class="dropdown-item" href="<%= destroy_user_session_path %>" data-method="delete">Salir</a>
+          <% else %>
+              <a class="dropdown-item" href="<%= new_user_session_path %>">Ingresar</a>
+              <a class="dropdown-item" href="<%= new_user_registration_path %>">Regristrar</a>
+              <div class="dropdown-divider"></div>
+            <% end %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+</div>

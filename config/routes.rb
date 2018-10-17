@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pages/index'
+  root to: 'pages#index'
   resources :products
   devise_for :users, controllers: {
         sessions: 'users/sessions'
