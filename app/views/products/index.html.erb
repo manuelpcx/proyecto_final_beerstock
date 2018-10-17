@@ -1,0 +1,26 @@
+  <h1>Products</h1>
+<div class="container">
+  <div class="row">
+
+    <% @products.each_slice(4) do |row| %>
+    <% row.each do |product| %>
+      <div class="col">
+        <div class="card">
+          <%= image_tag product.photo.url, class: 'card-img-top' %>
+          <div class="card-body">
+            <h5> <%= product.name %> </h>
+            <p> $<%= product.price %> </p>
+            <%= link_to "Comprar", class: 'btn btn-success', method: :post  %>
+            <%= link_to 'Show', product %>
+            <%= link_to 'Edit', edit_product_path(product) %>
+            <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+        </div>
+      </div>
+        <% end %>
+      <div class="w-100" style="margin-top:20px;"> </div>
+      <% end %>
+  </div>
+</div>
+
+<%= link_to 'New Product', new_product_path %>
