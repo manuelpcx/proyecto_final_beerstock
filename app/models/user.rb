@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+has_many :orders
+has_many :products, through: :orders
 
-
-
-  enum role: [:admin, :visit]
+enum role: [:admin, :visit]
 end
