@@ -7,7 +7,7 @@ ruby '2.3.4'
 gem 'carrierwave'
 gem 'rails', '~> 5.2.1'
 gem 'devise', git: 'https://github.com/plataformatec/devise.git'
-
+gem 'cancancan'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
