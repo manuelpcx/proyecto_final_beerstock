@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_17_225642) do
+ActiveRecord::Schema.define(version: 2018_10_19_215701) do
+
+  create_table "billings", force: :cascade do |t|
+    t.string "code"
+    t.string "payment_method"
+    t.decimal "amount", precision: 5, scale: 2
+    t.string "currency"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_billings_on_user_id"
+  end
 
   create_table "orders", force: :cascade do |t|
     t.boolean "payed", default: false
@@ -44,6 +55,9 @@ ActiveRecord::Schema.define(version: 2018_10_17_225642) do
     t.string "name"
     t.integer "phone"
     t.integer "role"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

@@ -8,6 +8,7 @@ gem 'carrierwave'
 gem 'rails', '~> 5.2.1'
 gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 gem 'cancancan'
+gem 'geocoder'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
