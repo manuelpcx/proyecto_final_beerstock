@@ -10,6 +10,7 @@ gem 'font-awesome-sass', '~> 5.3.1'
 gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 gem 'cancancan'
 gem 'geocoder'
+gem 'pg', '>= 0.18', '< 2.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
