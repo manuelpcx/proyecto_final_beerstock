@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'geocoder/findaddress'
   get 'pages/index'
 
   root to: 'pages#index'

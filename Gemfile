@@ -11,6 +11,7 @@ gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 gem 'cancancan'
 gem 'geocoder'
 gem 'pg', '>= 0.18', '< 2.0'
+gem 'rails-erd', require: false, group: :development
 # Use sqlite3 as the database for Active Record
 gem 'webpacker', require: false
 # Use Puma as the app server
