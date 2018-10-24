@@ -28,7 +28,7 @@
   </table>
 
   <%= link_to 'Limpiar carro',clean_orders_path, class: 'btn btn-outline-danger'  %>
-  <%= link_to 'Confirmar Compra', class: 'btn btn-outline-success float-right'   %>
+  <%= link_to 'Confirmar Compra', pre_pay_billings_path, class: 'btn btn-outline-success float-right'   %>
   <% else %>
     <p>No tienes productos en tu carro de compra.</p>
   <% end %>

@@ -8,6 +8,13 @@ Rails.application.routes.draw do
     resources :orders, only: :create
   end
 
+  resources :billings, only: [:index] do
+    collection do
+      get 'pre_pay'
+      get 'execute'
+    end
+  end
+
   resources :orders, only: :index do
     collection do
       get "clean"
