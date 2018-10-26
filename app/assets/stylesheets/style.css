@@ -137,7 +137,8 @@
 }
 #navbar
 {
-	background-image: url(buble.png);
+	background-image: url(buble.png) ;
+	background-repeat: repeat;
 }
 #carusel
 {
