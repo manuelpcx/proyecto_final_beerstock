@@ -9,6 +9,6 @@ has_many :products, through: :orders
 has_many :billings
 geocoded_by :address
 after_validation :geocode
-
+#validates :address, presence: true
 enum role: [:admin, :visit]
 end

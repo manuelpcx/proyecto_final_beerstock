@@ -1,0 +1,4 @@
+<%= javascript_include_tag "https://www.google.com/jsapi", "chartkick" %>
+<%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
+<% my_chart = Order.group_by_day(:created_at).count %>
+<%= column_chart my_chart %>

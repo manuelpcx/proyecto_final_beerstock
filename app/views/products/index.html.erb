@@ -11,7 +11,6 @@
             <h5> <%= product.name %> </h>
             <p> $<%= product.price %> </p>
             <%= link_to "Comprar",product_orders_path(product), class: 'btn btn-success', method: :post  %>
-            <%= link_to 'Show', product %>
             <% if can?(:edit, product) %>
             <%= link_to 'Edit', edit_product_path(product) %>
             <% end %>
@@ -26,5 +25,6 @@
       <% end %>
   </div>
 </div>
-
-<%= link_to 'New Product', new_product_path %>
+<% if can?(:create, @products)%>
+  <%= link_to 'New Product', new_product_path %>
+<% end %>
