@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  get 'perfil/index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get 'geocoder/findaddress'
   get 'pages/index'
+  get 'pages/about'
 
   root to: 'pages#index'
 

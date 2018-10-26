@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <% @perfil.each do |p|%>
+      <p><%= p.name %></p>
+      <p><%= p.email %></p>
+      <p><%= p.phone %></p>
+      <p><%= p.address %></p>
+    <% end %>
+  </div>
+
+</div>
