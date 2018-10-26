@@ -1,11 +1,15 @@
 <div class="container">
-  <div class="row">
-    <% @perfil.each do |p|%>
-      <p><%= p.name %></p>
-      <p><%= p.email %></p>
-      <p><%= p.phone %></p>
-      <p><%= p.address %></p>
-    <% end %>
+<% @perfil.each do |perfil| %>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Nombre:</h5>
+    <p class="card-text"><%= perfil.name %></p>
   </div>
-
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <% end %>
+</div>
 </div>
