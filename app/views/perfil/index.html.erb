@@ -1,15 +1,11 @@
 <div class="container">
-<% @perfil.each do |perfil| %>
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Nombre:</h5>
-    <p class="card-text"><%= perfil.name %></p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-  </ul>
-  <% end %>
-</div>
+    <h3>Nombre:</h3>
+    <p><%= @perfil.name %></p>
+    <h3>Email:</h3>
+    <p><%= @perfil.email %></p>
+    <h3>Telefono:</h3>
+    <p><%= @perfil.phone %></p>
+    <h3>Dirección:</h3>
+    <p><%= @perfil.address %></p>
+    <%= link_to "Editar", edit_user_registration_path(@perfil), class:'btn btn-info float-right' %>
 </div>

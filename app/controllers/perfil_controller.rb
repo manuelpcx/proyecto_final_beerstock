@@ -1,5 +1,5 @@
 class PerfilController < ApplicationController
   def index
-    @perfil = User.all
+    @perfil = User.find_by(id: current_user.id)
   end
 end
