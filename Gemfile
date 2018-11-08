@@ -16,6 +16,7 @@ gem 'paypal-sdk-rest'
 gem 'activeadmin'
 gem 'chartkick'
 gem 'groupdate'
+gem 'omniauth-facebook'
 # Use sqlite3 as the database for Active Record
 gem 'webpacker', require: false
 # Use Puma as the app server
