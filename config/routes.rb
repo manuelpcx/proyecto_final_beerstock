@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   get 'geocoder/findaddress'
   get 'pages/index'
-  get 'pages/about'
 
   root to: 'pages#index'
 
