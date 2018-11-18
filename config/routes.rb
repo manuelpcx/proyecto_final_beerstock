@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  resources :sends, only: [:create, :new]
   get 'perfil', to: 'perfil#index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

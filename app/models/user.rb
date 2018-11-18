@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :orders
   has_many :products, through: :orders
   has_many :billings
+  has_many :sends
   geocoded_by :address
   after_validation :geocode
   #validates :address, presence: true
