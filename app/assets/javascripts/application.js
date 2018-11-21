@@ -12,6 +12,9 @@
 //
 //= require jquery/dist/jquery
 //= require bootstrap/dist/js/bootstrap
+//= require jquery.easing
+//= require jqBootstrapValidation
+//= require agency
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks

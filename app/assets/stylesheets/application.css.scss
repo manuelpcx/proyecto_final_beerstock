@@ -11,8 +11,11 @@
  * It is generally better to create a new file per style scope.
  *
  *= require bootstrap/dist/css/bootstrap
- *= require_tree . 
+  *= require css/all
+ *= require agency.min
+ *= require_tree .
  *= require_self
  */
  @import " font-awesome-sprockets ";
  @import " font-awesome ";
+ @import "agency";

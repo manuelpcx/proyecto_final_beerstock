@@ -9,6 +9,12 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.paths << Rails.root.join('vendor', 'fonts')
 Rails.application.config.assets.paths << Rails.root.join('vendor', 'stylesheets')
+Rails.application.config.assets.paths << Rails.root.join('vendor', 'css')
+Rails.application.config.assets.paths << Rails.root.join('vendor', 'scss')
+Rails.application.config.assets.paths << Rails.root.join('vendor', 'js')
+Rails.application.config.assets.paths << Rails.root.join('vendor', 'fontawesome-free')
+Rails.application.config.assets.paths << Rails.root.join('vendor', 'jquery')
+Rails.application.config.assets.paths << Rails.root.join('vendor', 'jquery-easing')
 
 Rails.application.config.assets.precompile += %w( chartkick.js )
 # Precompile additional assets.
