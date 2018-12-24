@@ -10,18 +10,14 @@
         <% @products.each_slice(4) do |row| %>
         <% row.each do |product| %>
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="<%= product_orders_path(product) %>" data-method="post" >
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
+          
 
             <%= image_tag product.photo.url, class: 'card-img-top img-fluid' %>
-          </a>
+
           <div class="portfolio-caption">
             <h4><%= product.name %></h4>
             <p class="text-muted">$<%= product.price %></p>
+            <%= link_to 'Comprar', product_orders_path(product), class:'btn btn-success', method: 'post'%>
           </div>
         </div>
 
